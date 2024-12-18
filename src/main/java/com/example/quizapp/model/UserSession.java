@@ -1,0 +1,20 @@
+package com.example.quizapp.model;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+public class UserSession {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private Long userId;
+    private int totalQuestionsAnswered;
+    private int correctAnswers;
+    private int incorrectAnswers;
+}
